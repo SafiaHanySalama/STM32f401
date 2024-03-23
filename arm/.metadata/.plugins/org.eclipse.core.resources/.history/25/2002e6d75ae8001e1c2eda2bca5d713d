@@ -1,0 +1,66 @@
+/******************************************************************************
+ *
+ * Module: 
+ *
+ * File Name: nvic.c
+ *
+ * Description: 
+ *
+ * Author: Safia Hany
+ * 
+ * Date:  Mar 15, 2024
+ ******************************************************************************/
+#include "nvic.h"
+
+#define NVIC_BASE_ADDRESS           0xE000E100
+#define SCB_BASE_ADDRESS            0xE000ED00
+#define GET_REG_NUM_SHIFT			5
+#define GET_IRQn_BIT				0x1F
+typedef struct
+{
+	uint32 ISER[8];
+	uint32 Reserved1[24];
+	uint32 ICER[8];
+	uint32 Reserved2[24];
+	uint32 ISPR[8];
+	uint32 Reserved3[24];
+	uint32 ICPR[8];
+	uint32 Reserved4[24];
+	uint32 IABR[8];
+	uint32 Reserved5[56];
+	uint32 IPR[60];
+	uint32 Reserved1[580];
+	uint32 STIR;
+}NVIC_PERI_t;
+
+typedef struct
+{
+	uint32 CPUID;
+	uint32 ICSR;
+	uint32 VTOR;
+	uint32 AIRCR;
+	uint32 SCR;
+	uint32 CCR;
+	uint32 SHPR1;
+	uint32 SHPR2;
+	uint32 SHPR3;
+	uint32 SHCSR;
+	uint32 CFSR;
+	uint32 HFSR;
+	uint32 reserved;
+	uint32 MMAR;
+	uint32 BFAR;
+	uint32 AFSR;
+} SCB_PERI_t;
+
+volatile NVIC_PERI_t *const NVIC = (volatile NVIC_PERI_t *)NVIC_BASE_ADDRESS;
+volatile SCB_PERI_t *const SCB = (volatile SCB_PERI_t *)SCB_BASE_ADDRESS;
+
+void NVIC_EnableIRQ(IRQn_t IRQn)
+{
+	/*  NVIC->ISER[(IRQn >> 5)] = (1 << (IRQn & 0x1F));  enable interrupt
+	 *  (uint32_t)((int32_t)IRQn) >> GET_REG_NUM_SHIFT
+	 *  is IRQn >> 5 Means division by 2^5 which is 32
+	 *  IRQn & 0x1F Means reminder 32*/
+	NVIC->ISER[(uint32_t)((int32_t)IRQn) >> GET_REG_NUM_SHIFT] = (uint32_t)(1 << ((uint32_t)((int32_t)IRQn) & (uint32_t)0x1F)); /* enable interrupt */
+}

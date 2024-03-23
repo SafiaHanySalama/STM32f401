@@ -1,0 +1,40 @@
+/******************************************************************************
+ *
+ * Module: 
+ *
+ * File Name: systick.c
+ *
+ * Description: 
+ *
+ * Author: Safia Hany
+ * 
+ * Date:  Mar 23, 2024
+ ******************************************************************************/
+
+#include "mcal/systick.h"
+
+typedef struct
+{
+	uint32 CTRL;                    /*!< Offset: 0x000 (R/W)  SysTick Control and Status Register */
+	uint32 LOAD;                    /*!< Offset: 0x004 (R/W)  SysTick Reload Value Register       */
+	uint32 VAL;                     /*!< Offset: 0x008 (R/W)  SysTick Current Value Register      */
+	uint32 CALIB;                   /*!< Offset: 0x00C (R/ )  SysTick Calibration Register        */
+} SysTick_Peri_t;
+
+
+void systick_Handler (void)
+{
+	//I can't call toggle_led fn here
+	//Callback fn needed
+	if(App_cbf)
+	{
+		App_cbf();
+	}
+}
+void setCall_Back(systick_cbf_t cbf)
+{
+	if(cbf)
+	{
+		App_cbf();
+	}
+}

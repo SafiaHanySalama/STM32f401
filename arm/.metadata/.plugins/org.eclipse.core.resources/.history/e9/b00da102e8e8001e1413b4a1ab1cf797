@@ -1,0 +1,21 @@
+/******************************************************************************
+ *
+ * Module: 
+ *
+ * File Name: systick.h
+ *
+ * Description: 
+ *
+ * Author: Safia Hany
+ * 
+ * Date:  Mar 23, 2024
+ ******************************************************************************/
+#ifndef INCLUDE_MCAL_SYSTICK_H_
+#define INCLUDE_MCAL_SYSTICK_H_
+
+void SYSTICK_Init();
+void SYSTICK_set_ms(uint32 time);
+
+
+
+#endif /* INCLUDE_MCAL_SYSTICK_H_ */

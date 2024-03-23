@@ -1,0 +1,91 @@
+21:12:40 **** Incremental Build of configuration Debug for project drivers ****
+make all 
+Building file: ../src/HAL/LED/led.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/HAL/LED/led.d" -MT"src/HAL/LED/led.o" -c -o "src/HAL/LED/led.o" "../src/HAL/LED/led.c"
+Finished building: ../src/HAL/LED/led.c
+ 
+Building file: ../src/HAL/LED/led_cfg.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/HAL/LED/led_cfg.d" -MT"src/HAL/LED/led_cfg.o" -c -o "src/HAL/LED/led_cfg.o" "../src/HAL/LED/led_cfg.c"
+Finished building: ../src/HAL/LED/led_cfg.c
+ 
+Building target: drivers.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"drivers.map" --specs=nano.specs -o "drivers.elf" ./system/src/stm32f4-hal/stm32f4xx_hal.o ./system/src/stm32f4-hal/stm32f4xx_hal_adc.o ./system/src/stm32f4-hal/stm32f4xx_hal_adc_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_can.o ./system/src/stm32f4-hal/stm32f4xx_hal_cec.o ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/src/stm32f4-hal/stm32f4xx_hal_crc.o ./system/src/stm32f4-hal/stm32f4xx_hal_cryp.o ./system/src/stm32f4-hal/stm32f4xx_hal_cryp_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_dac.o ./system/src/stm32f4-hal/stm32f4xx_hal_dac_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_dcmi.o ./system/src/stm32f4-hal/stm32f4xx_hal_dcmi_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o ./system/src/stm32f4-hal/stm32f4xx_hal_dma.o ./system/src/stm32f4-hal/stm32f4xx_hal_dma2d.o ./system/src/stm32f4-hal/stm32f4xx_hal_dma_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_dsi.o ./system/src/stm32f4-hal/stm32f4xx_hal_eth.o ./system/src/stm32f4-hal/stm32f4xx_hal_exti.o ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/src/stm32f4-hal/stm32f4xx_hal_flash_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_flash_ramfunc.o ./system/src/stm32f4-hal/stm32f4xx_hal_fmpi2c.o ./system/src/stm32f4-hal/stm32f4xx_hal_fmpi2c_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_fmpsmbus.o ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/src/stm32f4-hal/stm32f4xx_hal_hash.o ./system/src/stm32f4-hal/stm32f4xx_hal_hash_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_hcd.o ./system/src/stm32f4-hal/stm32f4xx_hal_i2c.o ./system/src/stm32f4-hal/stm32f4xx_hal_i2c_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_i2s.o ./system/src/stm32f4-hal/stm32f4xx_hal_i2s_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_irda.o ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/src/stm32f4-hal/stm32f4xx_hal_lptim.o ./system/src/stm32f4-hal/stm32f4xx_hal_ltdc.o ./system/src/stm32f4-hal/stm32f4xx_hal_ltdc_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_mmc.o ./system/src/stm32f4-hal/stm32f4xx_hal_nand.o ./system/src/stm32f4-hal/stm32f4xx_hal_nor.o ./system/src/stm32f4-hal/stm32f4xx_hal_pccard.o ./system/src/stm32f4-hal/stm32f4xx_hal_pcd.o ./system/src/stm32f4-hal/stm32f4xx_hal_pcd_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/src/stm32f4-hal/stm32f4xx_hal_pwr_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_qspi.o ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o ./system/src/stm32f4-hal/stm32f4xx_hal_rcc_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_rng.o ./system/src/stm32f4-hal/stm32f4xx_hal_rtc.o ./system/src/stm32f4-hal/stm32f4xx_hal_rtc_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_sai.o ./system/src/stm32f4-hal/stm32f4xx_hal_sai_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_sd.o ./system/src/stm32f4-hal/stm32f4xx_hal_sdram.o ./system/src/stm32f4-hal/stm32f4xx_hal_smartcard.o ./system/src/stm32f4-hal/stm32f4xx_hal_smbus.o ./system/src/stm32f4-hal/stm32f4xx_hal_spdifrx.o ./system/src/stm32f4-hal/stm32f4xx_hal_spi.o ./system/src/stm32f4-hal/stm32f4xx_hal_sram.o ./system/src/stm32f4-hal/stm32f4xx_hal_tim.o ./system/src/stm32f4-hal/stm32f4xx_hal_tim_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_uart.o ./system/src/stm32f4-hal/stm32f4xx_hal_usart.o ./system/src/stm32f4-hal/stm32f4xx_hal_wwdg.o ./system/src/stm32f4-hal/stm32f4xx_ll_adc.o ./system/src/stm32f4-hal/stm32f4xx_ll_crc.o ./system/src/stm32f4-hal/stm32f4xx_ll_dac.o ./system/src/stm32f4-hal/stm32f4xx_ll_dma.o ./system/src/stm32f4-hal/stm32f4xx_ll_dma2d.o ./system/src/stm32f4-hal/stm32f4xx_ll_exti.o ./system/src/stm32f4-hal/stm32f4xx_ll_fmc.o ./system/src/stm32f4-hal/stm32f4xx_ll_fmpi2c.o ./system/src/stm32f4-hal/stm32f4xx_ll_fsmc.o ./system/src/stm32f4-hal/stm32f4xx_ll_gpio.o ./system/src/stm32f4-hal/stm32f4xx_ll_i2c.o ./system/src/stm32f4-hal/stm32f4xx_ll_lptim.o ./system/src/stm32f4-hal/stm32f4xx_ll_pwr.o ./system/src/stm32f4-hal/stm32f4xx_ll_rcc.o ./system/src/stm32f4-hal/stm32f4xx_ll_rng.o ./system/src/stm32f4-hal/stm32f4xx_ll_rtc.o ./system/src/stm32f4-hal/stm32f4xx_ll_sdmmc.o ./system/src/stm32f4-hal/stm32f4xx_ll_spi.o ./system/src/stm32f4-hal/stm32f4xx_ll_tim.o ./system/src/stm32f4-hal/stm32f4xx_ll_usart.o ./system/src/stm32f4-hal/stm32f4xx_ll_usb.o ./system/src/stm32f4-hal/stm32f4xx_ll_utils.o  ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xc.o  ./src/MCAL/RCC/rcc.o  ./src/MCAL/GPIO/gpio.o  ./src/HAL/SWITCH/switch.o ./src/HAL/SWITCH/switch_cfg.o  ./src/HAL/LED/led.o ./src/HAL/LED/led_cfg.o  ./src/initialize-hardware.o ./src/main.o ./src/stm32f4xx_hal_msp.o ./src/write.o   
+Finished building target: drivers.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "drivers.elf"  "drivers.hex"
+Finished building: drivers.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "drivers.elf"
+   text	   data	    bss	    dec	    hex	filename
+   8160	    168	    420	   8748	   222c	drivers.elf
+Finished building: drivers.siz
+ 
+16:30:47 **** Incremental Build of configuration Debug for project testen ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "testen.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9370	    168	    424	   9962	   26ea	testen.elf
+Finished building: testen.siz
+ 
+16:38:42 **** Incremental Build of configuration Debug for project testen ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "testen.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9370	    168	    424	   9962	   26ea	testen.elf
+Finished building: testen.siz
+ 
+16:39:20 **** Incremental Build of configuration Debug for project testen ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "testen.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9370	    168	    424	   9962	   26ea	testen.elf
+Finished building: testen.siz
+ 
+16:42:42 **** Incremental Build of configuration Debug for project testen ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "testen.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9370	    168	    424	   9962	   26ea	testen.elf
+Finished building: testen.siz
+ 
+16:42:56 **** Incremental Build of configuration Debug for project testen ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "testen.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9370	    168	    424	   9962	   26ea	testen.elf
+Finished building: testen.siz
+ 
+09:49:21 **** Incremental Build of configuration Debug for project testen ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "testen.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9370	    168	    424	   9962	   26ea	testen.elf
+Finished building: testen.siz
+ 
+10:14:35 **** Incremental Build of configuration Debug for project testen ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "testen.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9370	    168	    424	   9962	   26ea	testen.elf
+Finished building: testen.siz
+ 
+11:41:00 **** Incremental Build of configuration Debug for project testen ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "testen.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9370	    168	    424	   9962	   26ea	testen.elf
+Finished building: testen.siz
+ 

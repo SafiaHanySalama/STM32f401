@@ -1,0 +1,36 @@
+/******************************************************************************
+ *
+ * Module: 
+ *
+ * File Name: nvic.h
+ *
+ * Description: 
+ *
+ * Author: Safia Hany
+ * 
+ * Date:  Mar 15, 2024
+ ******************************************************************************/
+#ifndef INCLUDE_NVIC_H_
+#define INCLUDE_NVIC_H_
+
+#include "library/Stm32F4xx.h"
+
+/** @brief  Enable External Interrupt
+
+    The function enables a device-specific interrupt in the NVIC interrupt controller.
+
+    @param [in]      IRQn  External interrupt number. Value cannot be negative.
+ */
+void NVIC_EnableIRQ(IRQn_t IRQn);
+
+/** @brief  Disable External Interrupt
+
+    The function disables a device-specific interrupt in the NVIC interrupt controller.
+
+    @param [in]      IRQn  External interrupt number. Value cannot be negative.
+ */
+void NVIC_DisableIRQ(IRQn_t IRQn);
+
+
+
+#endif /* INCLUDE_NVIC_H_ */

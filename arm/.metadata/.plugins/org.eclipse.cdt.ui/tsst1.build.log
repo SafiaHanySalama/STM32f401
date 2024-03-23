@@ -1,0 +1,11 @@
+16:28:48 **** Incremental Build of configuration Debug for project tsst1 ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "tsst1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   8160	    168	    420	   8748	   222c	tsst1.elf
+Finished building: tsst1.siz
+ 
+
+16:28:50 Build Finished. 0 errors, 0 warnings. (took 1s.808ms)
+

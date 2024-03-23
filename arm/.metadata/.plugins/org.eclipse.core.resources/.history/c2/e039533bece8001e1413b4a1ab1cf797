@@ -1,0 +1,34 @@
+/******************************************************************************
+ *
+ * Module: 
+ *
+ * File Name: systick.c
+ *
+ * Description: 
+ *
+ * Author: Safia Hany
+ * 
+ * Date:  Mar 23, 2024
+ ******************************************************************************/
+
+#include "systick.h"
+
+#define SYSTICK_BASE_ADDRESS		0xE000E010
+typedef struct
+{
+	uint32 CTRL;                    /*!< Offset: 0x000 (R/W)  SysTick Control and Status Register */
+	uint32 LOAD;                    /*!< Offset: 0x004 (R/W)  SysTick Reload Value Register       */
+	uint32 VAL;                     /*!< Offset: 0x008 (R/W)  SysTick Current Value Register      */
+	uint32 CALIB;                   /*!< Offset: 0x00C (R/ )  SysTick Calibration Register        */
+} SysTick_Peri_t;
+
+typedef SysTick_Peri_t * const Systick =  (volatile SysTick_Peri_t *)SYSTICK_BASE_ADDRESS;
+static systick_cbf_t APP_cbf= NULL_PTR;
+
+void setCall_Back(systick_cbf_t cbf)
+{
+	if(cbf != NULL_PTR)
+	{
+		APP_cbf = cbf;
+	}
+}

@@ -1,0 +1,51 @@
+/******************************************************************************
+ *
+ * Module: 
+ *
+ * File Name: nvic.c
+ *
+ * Description: 
+ *
+ * Author: Safia Hany
+ * 
+ * Date:  Mar 15, 2024
+ ******************************************************************************/
+#define NVIC_BASE_ADDRESS            0xE000E100
+
+typedef struct
+{
+	uint32 ISER[8];
+	uint32 Reserved1[24];
+	uint32 ICER[8];
+	uint32 Reserved2[24];
+	uint32 ISPR[8];
+	uint32 Reserved3[24];
+	uint32 ICPR[8];
+	uint32 Reserved4[24];
+	uint32 IABR[8];
+	uint32 Reserved5[56];
+	uint32 IPR[60];
+	uint32 Reserved1[580];
+	uint32 STIR;
+}NVIC_PERI_t;
+
+typedef struct
+{
+    uint32 CPUID;
+    uint32 ICSR;
+    uint32 VTOR;
+    uint32_t AIRCR;
+    uint32_t SCR;
+    uint32_t CCR;
+    uint32_t SHPR1;
+    uint32_t SHPR2;
+    uint32_t SHPR3;
+    uint32_t SHCSR;
+    uint32_t CFSR;
+    uint32_t HFSR;
+    uint32_t reserved;
+    uint32_t MMAR;
+    uint32_t BFAR;
+    uint32_t AFSR;
+} SCB_PERI_t;
+volatile NVIC_PERI_t *const NVIC = (volatile NVIC_PERI_t *)NVIC_BASE_ADDRESS;

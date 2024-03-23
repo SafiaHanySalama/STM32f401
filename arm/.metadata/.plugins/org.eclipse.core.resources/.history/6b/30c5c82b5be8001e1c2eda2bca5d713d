@@ -1,0 +1,22 @@
+/******************************************************************************
+ *
+ * Module: 
+ *
+ * File Name: nvic.h
+ *
+ * Description: 
+ *
+ * Author: Safia Hany
+ * 
+ * Date:  Mar 15, 2024
+ ******************************************************************************/
+#ifndef INCLUDE_NVIC_H_
+#define INCLUDE_NVIC_H_
+
+#include "library/Stm32F4xx.h"
+
+void NVIC_EnableIRQ(IRQn_t IRQn);
+
+
+
+#endif /* INCLUDE_NVIC_H_ */

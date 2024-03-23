@@ -1,0 +1,4 @@
+1711117808311	Move 'library' to 'include'
+1711117814237	Move 'Stm32F4xx.h' to 'library'
+1711117839705	Move 3 resources to 'mcal'
+1711117845000	Move 2 resources to 'library'

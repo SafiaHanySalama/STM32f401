@@ -1,0 +1,11 @@
+11:41:00 **** Incremental Build of configuration Debug for project testen ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "testen.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9370	    168	    424	   9962	   26ea	testen.elf
+Finished building: testen.siz
+ 
+
+11:41:02 Build Finished. 0 errors, 0 warnings. (took 1s.726ms)
+

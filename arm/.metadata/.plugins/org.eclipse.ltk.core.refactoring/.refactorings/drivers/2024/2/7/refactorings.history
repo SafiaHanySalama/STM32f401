@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;drivers/src/MCAL/RCC/rcc_program.c&apos; to &apos;rcc.c&apos;" description="Rename resource &apos;rcc_program.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/MCAL/RCC/rcc_program.c" name="rcc.c" stamp="1707761721651" updateReferences="true"/>
+</session>
